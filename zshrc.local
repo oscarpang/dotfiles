@@ -1,5 +1,3 @@
-echo "Load local zsh setup"
-
 source $ZSH/oh-my-zsh.sh
 
 setopt noautomenu
