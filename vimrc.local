@@ -12,8 +12,12 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 "colorscheme molokai 
 "colorscheme github
-"colorscheme onedark
+"colorschem onedark
 colorscheme seoul256
+
+set incsearch
+set hlsearch
+set mouse=a
 
 let g:airline_symbols_ascii = 1
 let g:python_highlight_all = 1
