@@ -1,7 +1,8 @@
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="ys"
-plugins=(git)
+HIST_STAMPS="yyyy-mm-dd"
 source $ZSH/oh-my-zsh.sh
+plugins=(git z command-not-found) 
 
 setopt noautomenu
 setopt nomenucomplete
@@ -10,6 +11,7 @@ setopt nomenucomplete
 setopt EXTENDED_HISTORY
 SAVEHIST=5000
 HISTSIZE=2000
+
 
 # share history across multiple zsh sessions
 setopt SHARE_HISTORY
@@ -33,5 +35,14 @@ setopt CORRECT_ALL
 
 # Enable fzf in zsh
 source ~/.fzf.zsh
+
+# OS specific settings 
+OS="$(uname -s)"
+if test "$OS" = "Darwin"; then
+ HB_CNF_HANDLER="$(brew --repository)/Library/Taps/homebrew/homebrew-command-not-found/handler.sh"
+ if [ -f "$HB_CNF_HANDLER" ]; then
+ source "$HB_CNF_HANDLER";
+ fi
+fi
 
 umask 022
