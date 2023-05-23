@@ -48,4 +48,6 @@ if test "$OS" = "Darwin"; then
  fi
 fi
 
+export PATH=$PATH:/home/oscar/.local/bin
+
 umask 022
