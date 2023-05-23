@@ -7,6 +7,7 @@ set numberwidth=5
 
 " Set colorscheme
 :colorscheme molokai
+:syntax on
 
 " Cursor section
 " The number of screen lines to keep above and below the cursor.
