@@ -48,6 +48,8 @@ if test "$OS" = "Darwin"; then
  fi
 fi
 
-export PATH=$PATH:/home/oscar/.local/bin
+export PATH=$PATH:$HOME/.local/bin
+
+source $HOME/.aliases
 
 umask 022
