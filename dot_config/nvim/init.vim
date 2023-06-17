@@ -54,7 +54,7 @@ set nomodeline
 " Make it obvious where 80 characters is
 set colorcolumn=80
 
-" Get off my lawn
+" Moving around, and get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
@@ -66,6 +66,9 @@ set tabstop=2    "Indent using 2 spaces.
 set shiftwidth=2 "When shifting, indent using 2 spaces.
 set shiftround   "When shifting lines, round the indentation to the nearest multiple of shiftwidth
 set expandtab    "Convert tabs to spaces.
+
+" Indent
+set smartindent  "Puts indentation automatically at appropriate places after you type {, }, or #.
 set autoindent   "New lines inherit the indentation of previous lines.
 
 " Display extra whitespace
@@ -91,6 +94,10 @@ set wildmode=list:longest
 " There are certain files that we would never want to edit with Vim.
 " Wildmenu will ignore files with these extensions.
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
+
+" Split
+set splitright
+set splitbelow
 
 
 " Return to last edit position when opening files (You want this!)
