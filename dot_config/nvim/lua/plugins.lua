@@ -47,4 +47,10 @@ require("lazy").setup({
       return vim.fn.executable 'make' == 1
     end,
   },
+
+  -- File explorer
+  'nvim-tree/nvim-tree.lua',
+  'nvim-tree/nvim-web-devicons',
+
+  {'akinsho/toggleterm.nvim', version = "*", config = true}
 })
