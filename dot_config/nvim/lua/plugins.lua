@@ -12,14 +12,30 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+  -- Color theme
+  'Mofiqul/vscode.nvim',
+
   -- git related
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
   'lewis6991/gitsigns.nvim',
 
-  -- whichkeys
-  { 'folke/which-key.nvim',  opts = {} },
+  -- tree-sitter
+  {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+  },
 
+  -- Better movement
+  "ggandor/leap.nvim",
+  "ggandor/flit.nvim",
+
+  "RRethy/vim-illuminate",
+
+  -- whichkeys
+  { 'folke/which-key.nvim', opts = {} },
+
+  -- LSP
   "williamboman/mason.nvim",
   "williamboman/mason-lspconfig.nvim",
   "neovim/nvim-lspconfig",
@@ -30,7 +46,7 @@ require("lazy").setup({
   "hrsh7th/cmp-nvim-lsp-signature-help", -- signature help
 
   -- "gc" to comment visual regions/lines
-  { 'numToStr/Comment.nvim', opts = {} },
+  { 'numToStr/Comment.nvim',   opts = {} },
 
   {
     'nvim-telescope/telescope.nvim',

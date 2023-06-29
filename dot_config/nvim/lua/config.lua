@@ -29,3 +29,9 @@ require("git_configs")
 require("telescope_configs")
 
 require("file_explorer")
+
+require("nvim_treesitter_config")
+
+require("vscode_configs")
+
+require("movement")

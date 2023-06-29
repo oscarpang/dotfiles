@@ -5,7 +5,7 @@ set nocompatible
 set numberwidth=5
 
 " Set colorscheme
-:colorscheme molokai
+":colorscheme molokai
 :syntax on
 
 " Cursor section
