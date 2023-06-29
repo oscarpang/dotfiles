@@ -1,4 +1,3 @@
-
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -19,21 +18,24 @@ require("lazy").setup({
   'lewis6991/gitsigns.nvim',
 
   -- whichkeys
-  { 'folke/which-key.nvim', opts = {} },
+  { 'folke/which-key.nvim',  opts = {} },
 
+  "williamboman/mason.nvim",
+  "williamboman/mason-lspconfig.nvim",
   "neovim/nvim-lspconfig",
-  "hrsh7th/nvim-cmp", -- Autocompletion plugin
-  "hrsh7th/cmp-nvim-lsp", -- LSP source for nvim-cmp
-  "saadparwaiz1/cmp_luasnip", -- Snippets source for nvim-cmp
-  "L3MON4D3/LuaSnip", -- Snippets plugin
+  "hrsh7th/nvim-cmp",                    -- Autocompletion plugin
+  "hrsh7th/cmp-nvim-lsp",                -- LSP source for nvim-cmp
+  "saadparwaiz1/cmp_luasnip",            -- Snippets source for nvim-cmp
+  "L3MON4D3/LuaSnip",                    -- Snippets plugin
   "hrsh7th/cmp-nvim-lsp-signature-help", -- signature help
 
   -- "gc" to comment visual regions/lines
   { 'numToStr/Comment.nvim', opts = {} },
 
   {
-    'nvim-telescope/telescope.nvim', tag = '0.1.1',
-      dependencies = { 'nvim-lua/plenary.nvim' }
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.1',
+    dependencies = { 'nvim-lua/plenary.nvim' }
   },
   -- Fuzzy Finder Algorithm which requires local dependencies to be built.
   -- Only load if `make` is available. Make sure you have the system
@@ -52,5 +54,5 @@ require("lazy").setup({
   'nvim-tree/nvim-tree.lua',
   'nvim-tree/nvim-web-devicons',
 
-  {'akinsho/toggleterm.nvim', version = "*", config = true}
+  { 'akinsho/toggleterm.nvim', version = "*", config = true }
 })
