@@ -39,7 +39,11 @@ return {
       end,
     },
   },
-  { "nvim-neo-tree/neo-tree.nvim", enabled = true, opts = { close_if_last_window = true, follow_current_file = true } },
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    enabled = true,
+    opts = { close_if_last_window = false, follow_current_file = true },
+  },
   {
     "nvim-tree/nvim-web-devicons",
     opts = {
