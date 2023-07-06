@@ -1,7 +1,7 @@
 return {
   -- add gruvbox
   { "folke/tokyonight.nvim", opts = {
-    style = "day",
+    style = "moon",
   } },
 
   -- Configure LazyVim to load gruvbox
