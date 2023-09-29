@@ -42,7 +42,20 @@ return {
   {
     "nvim-neo-tree/neo-tree.nvim",
     enabled = true,
-    opts = { close_if_last_window = false, follow_current_file = true },
+    opts = {
+      close_if_last_window = false,
+      follow_current_file = true,
+      event_handlers = {
+        {
+          event = "neo_tree_buffer_enter",
+          handler = function(arg)
+            vim.cmd([[
+          setlocal relativenumber
+        ]])
+          end,
+        },
+      },
+    },
   },
   {
     "nvim-tree/nvim-web-devicons",
